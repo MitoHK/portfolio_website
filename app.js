@@ -6,7 +6,7 @@ let logger = require('morgan');
 
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
-let formRouter = require('./routes/formulario');
+let regRouter = require('./routes/registro');
 
 let app = express();
 
@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/formulario', formRouter);
+app.use('/registro', regRouter);
 
 
 app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')))
